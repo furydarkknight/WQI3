@@ -1,0 +1,89 @@
+{
+  "data": "water_quality_dataset1.csv",
+  "n_rows": 20000,
+  "positive_rate": 0.3,
+  "selected": {
+    "model": "Random Forest",
+    "strategy": "class_weight"
+  },
+  "test": {
+    "accuracy": 100.0,
+    "balanced_accuracy": 100.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "mcc": 1.0,
+    "auc_roc": 1.0,
+    "brier_score": 0.0001,
+    "confusion_matrix": [
+      [
+        2800,
+        0
+      ],
+      [
+        0,
+        1200
+      ]
+    ]
+  },
+  "test_ci": {
+    "accuracy_ci95": [
+      1.0,
+      1.0
+    ],
+    "auc_ci95": [
+      1.0,
+      1.0
+    ]
+  },
+  "cv": {
+    "Logistic Regression|none": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "Logistic Regression|class_weight": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "Logistic Regression|smote": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "Random Forest|none": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "Random Forest|class_weight": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "Random Forest|smote": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "Gradient Boosting|none": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "Gradient Boosting|class_weight": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "Gradient Boosting|smote": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "XGBoost|none": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "XGBoost|class_weight": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    },
+    "XGBoost|smote": {
+      "cv_auc": 1.0,
+      "cv_auc_std": 0.0
+    }
+  }
+}
