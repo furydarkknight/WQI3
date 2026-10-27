@@ -586,8 +586,10 @@ def sample_data():
     return jsonify(samples)
 
 
+# Automatically load all model artifacts on module import (for WSGI/Gunicorn and CLI)
+load_artifacts()
+
 if __name__ == '__main__':
-    load_artifacts()
     port = int(os.environ.get('PORT', 5000))
     print(f"[START] Starting unified AquaPredict server on port {port}...")
     app.run(host='0.0.0.0', port=port, debug=False)
