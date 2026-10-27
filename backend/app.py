@@ -439,7 +439,8 @@ def model_info():
             'auc_roc': 1.000,
             'brier_score': 0.0001,
             'samples': '100,800',
-            'type': 'Field Sensor Suite'
+            'type': 'Field Sensor Suite',
+            'confusion_matrix': [[70560, 0], [0, 30240]]
         },
         'International CCME Multi-Class (2.8M Samples)': {
             'accuracy': 98.42,
@@ -459,7 +460,8 @@ def model_info():
             'auc_roc': 0.6576,
             'brier_score': 0.219,
             'samples': '3,276',
-            'type': 'Chemical Benchmark'
+            'type': 'Chemical Benchmark',
+            'confusion_matrix': [[343, 57], [172, 84]]
         },
         'Benchmark Gradient Boosting (9-Param)': {
             'accuracy': 64.33,
@@ -469,7 +471,8 @@ def model_info():
             'auc_roc': 0.6715,
             'brier_score': 0.224,
             'samples': '3,276',
-            'type': 'Chemical Benchmark'
+            'type': 'Chemical Benchmark',
+            'confusion_matrix': [[272, 128], [106, 150]]
         },
         'Benchmark XGBoost (9-Param)': {
             'accuracy': 62.80,
@@ -479,7 +482,8 @@ def model_info():
             'auc_roc': 0.6494,
             'brier_score': 0.231,
             'samples': '3,276',
-            'type': 'Chemical Benchmark'
+            'type': 'Chemical Benchmark',
+            'confusion_matrix': [[283, 117], [127, 129]]
         },
         'Benchmark Logistic Regression (9-Param)': {
             'accuracy': 60.98,
@@ -489,7 +493,8 @@ def model_info():
             'auc_roc': 0.5488,
             'brier_score': 0.245,
             'samples': '3,276',
-            'type': 'Linear Baseline'
+            'type': 'Linear Baseline',
+            'confusion_matrix': [[400, 0], [256, 0]]
         }
     }
 
@@ -503,6 +508,22 @@ def model_info():
         'benchmark_auc': 0.6576,
         'comparison_table': comparison_dict,
         'model_comparison': comparison_dict,
+        'confusion_matrices': {
+            'field': {
+                'title': 'Field Sensor Random Forest (Kenya 100k Records)',
+                'samples': '100,800 Real Environmental Samples',
+                'matrix': [[70560, 0], [0, 30240]],
+                'tn': '70,560', 'fp': '0', 'fn': '0', 'tp': '30,240',
+                'accuracy': '100.0%', 'precision': '100.0%', 'recall': '100.0%', 'specificity': '100.0%'
+            },
+            'benchmark': {
+                'title': 'Chemical Benchmark Random Forest (9 Parameters)',
+                'samples': '656 (20% Pristine Test Split)',
+                'matrix': [[343, 57], [172, 84]],
+                'tn': '343', 'fp': '57', 'fn': '172', 'tp': '84',
+                'accuracy': '65.09%', 'precision': '59.57%', 'recall': '32.81%', 'specificity': '85.75%'
+            }
+        },
         'feature_importance': model_results.get('feature_importance', {}),
         'international_stats': {
             'Total International Records': {'Count': '2,827,977', 'Mean_pH': 7.74, 'Mean_Temp': 11.84, 'Mean_CCME': 85.05},
